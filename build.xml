@@ -1,0 +1,22 @@
+<project name="HelloWorld" default="main" basedir=".">
+  <target name="main">
+    <script language="beanshell" setbeans="true">
+	  
+	  <classpath>
+		<fileset dir="." includes="bsh-2.0b6.jar" />
+	  </classpath>
+	  
+	  String name = project.getProperty("name");
+	 
+	  if(name.equals("World"))
+	  {
+		print("Hello World.");
+	  }
+	  else
+	  {
+		print("Hello Default.");
+	  }
+	  
+	</script>
+  </target>
+</project>
